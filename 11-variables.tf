@@ -24,3 +24,33 @@ variable "cluster_name" {
   description = "AWS EKS CLuster Name"
   nullable    = false
 }
+
+variable "vpc_cidr_block" {
+  default     = "10.0.0.0/16"
+  type        = string
+  description = "AWS EKS CLuster Name"
+}
+
+variable "vpc_private_subnet_1" {
+  default     = "10.0.0.0/19"
+  type        = string
+  description = "AWS EKS CLuster Name"
+}
+
+variable "vpc_private_subnet_2" {
+  default     = "10.0.32.0/19"
+  type        = string
+  description = "AWS EKS CLuster Name"
+}
+
+variable "vpc_public_subnet_1" {
+  default     = "10.0.64.0/19"
+  type        = string
+  description = "AWS EKS CLuster Name"
+}
+
+variable "vpc_public_subnet_2" {
+  default     = "10.0.96.0/19"
+  type        = string
+  description = "AWS EKS CLuster Name"
+}
