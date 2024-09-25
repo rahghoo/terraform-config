@@ -37,12 +37,6 @@ This will prompt you to enter your AWS access key, secret key, default region, a
 ├── 09-igw.tf               # Internet Gateway definition
 ├── 10-iam-autoscaler.tf    # IAM Role for Cluster Autoscaler
 ├── 11-variables.tf         # Variables file
-└── modules/                # Folder for modularized components
-    ├── vpc/                # Module for VPC
-    ├── subnets/            # Module for Subnets
-    ├── eks/                # Module for EKS
-    ├── iam/                # Module for IAM roles
-    └── rds/                # Optional: Module for RDS (if applicable)
 ```
 
 ### Instructions for Setup
