@@ -64,19 +64,14 @@ terraform plan
 
 #### Step 4: Modularization
 
-The Terraform code is organized into reusable modules for VPC, Subnets, EKS, IAM, and RDS. To call a module, you can use the following syntax in the main configuration files:
+The Terraform code is organized into reusable modules for VPC, Subnets, EKS, IAM Role for a cluster autoscaler. To call this module, you can use the following syntax in the main configuration files:
 
 ```
-module "vpc" {
-  source = "./modules/vpc"
+module "eks_cluster_with_vpc" {
+  source = "git@github.com:rahghoo/terraform-config.git"
   vpc_cidr = var.vpc_cidr
 }
 
-module "eks" {
-  source = "./modules/eks"
-  cluster_name = var.eks_cluster_name
-  vpc_id = module.vpc.vpc_id
-}
 ```
 
 With this modularized approach, you can easily reuse components, scale the infrastructure, and make adjustments as needed without duplicating code. Each module is independently manageable and can be tailored to your specific infrastructure requirements.
