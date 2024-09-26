@@ -15,7 +15,7 @@ variable "project_name" {
 
 variable "availability_zones" {
   description = "Name of resources in AWS"
-  default     = ["eu-central-1a", cognigy"eu-central-1b"]
+  default     = ["eu-central-1a", "eu-central-1b"]
 }
 
 variable "cluster_name" {
